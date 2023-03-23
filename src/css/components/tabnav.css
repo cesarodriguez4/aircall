@@ -1,0 +1,23 @@
+.tabnav {
+    display: flex;
+    border-bottom: 1px solid #e1e4e8;
+    box-sizing: border-box;
+    justify-content: space-between;
+}
+
+.tabnav > .activity {
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    font-size: 16px;
+    padding: 3%;
+}
+
+.tabnav > .tabs {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    border-top: 1px solid #F0F0F0;
+    border-left: 1px solid #F0F0F0;
+    padding: 1em;
+}

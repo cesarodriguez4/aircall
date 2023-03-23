@@ -7,6 +7,6 @@
 .bottom-nav {
     display: flex;
     width: 100%;
-    justify-content: center;
-    align-items: baseline;
+    justify-content: space-evenly;
+    align-items: center;
 }
