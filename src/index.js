@@ -5,6 +5,7 @@ import './css/components/bottom-nav.css';
 import './css/components/inbox.css';
 import './css/components/tabnav.css';
 import './css/components/call-details.css';
+import './css/components/dial.css';
 
 import App from './App.jsx';
 

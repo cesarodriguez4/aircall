@@ -1,0 +1,11 @@
+.dial {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.dial > img {
+    width: 70%;
+    margin-top: 15%;
+    object-fit: contain;
+}
