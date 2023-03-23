@@ -27,9 +27,9 @@ export function Inbox({callHistory}) {
                                 {call.call_type === 'voicemail' && <img width={20} src="public/outbound.svg" />}
                             </div>
                             <div>
-                                <div>{call.from}</div>
-                                <div>
-                                    tried to call on {call.to}
+                                <div className='from'><b>{call.from}</b></div>
+                                <div className='to'>
+                                    tried to call on <b>{call.to}</b>
                                 </div>
                             </div>
                             {

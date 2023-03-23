@@ -12,11 +12,17 @@
 }
 
 .inbox > .month > .item {
-    display: flex;
+    display: grid;
+    grid-template-columns: 0.5fr 3fr 1fr; 
     border: 1px solid #E9E9E8;
-    border-radius: 5px;
-    padding: 15px;
+    border-radius: 12px;
+    padding: 12px;
     margin-bottom: 3%;
+}
+
+.to {
+    color: #B0B0B0;
+    font-size: 12px;
 }
 
 .inbox > .month > .date {
@@ -25,6 +31,7 @@
     color: #BBBBBA;
     font-size: 10px;
     font-weight: 500;
+    margin-bottom: 1em;
 }
 
 
