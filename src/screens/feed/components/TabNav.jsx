@@ -1,17 +1,17 @@
 import React from "react";
 
-export function TabNav() {
+export function TabNav({onSelectedTab, tab}) {
     return <div className="tabnav">
         <div className="activity">
             <img width={30} src="public/call.svg" />
             Activity
         </div>
         <div className="tabs">
-            <div>
+            <div className={tab === 'inbox' ? 'active' : ''} onClick={() => onSelectedTab('inbox')}>
                 Inbox
             </div>
             <div className="vertical-divider"></div>
-            <div>
+            <div className={tab === 'archived' ? 'active' : ''} onClick={() => onSelectedTab('archived')}>
                 Archived
             </div>
             <div className="vertical-divider"></div>

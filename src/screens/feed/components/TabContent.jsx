@@ -8,8 +8,8 @@ export function TabContent({tab, callHistory, isLoading, error}) {
     if (error) {
         return <div>An Error has occurred, try later.</div>;
     }
-    if (tab === 'inbox') {
-      return <Inbox callHistory={callHistory} />;
+    if (tab === 'inbox' || tab === 'archived') {
+      return <Inbox showArchived={tab === 'archived'} callHistory={callHistory} />;
     } else {
         return <div>No Content</div>;
     }

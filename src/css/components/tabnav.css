@@ -15,9 +15,20 @@
 
 .tabnav > .tabs {
     display: flex;
-    align-items: center;
     gap: 30px;
     border-top: 1px solid #F0F0F0;
     border-left: 1px solid #F0F0F0;
-    padding: 1em;
+    padding-left: 5%;
+    padding-right: 5%;
+    cursor: pointer;
+}
+
+.tabnav > .tabs > div {
+    display: flex;
+    align-items: center;
+}
+
+.tabnav > .tabs > .active {
+    border-bottom: 3px solid #FC5624;
+    font-weight: bold;
 }

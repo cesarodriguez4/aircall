@@ -26,11 +26,6 @@ export function CallDetails() {
       fetchData();
   }, []);
 
-  // if (!callData) {
-  //   return <div>Select a call item from the Feed to show information</div>;
-  // }
-
-
   return <div>
     <h1>Call Details</h1>
     <p>Call ID: {id}</p>

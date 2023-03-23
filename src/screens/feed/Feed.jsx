@@ -25,6 +25,10 @@ export function Feed() {
         fetchData();
     }, []);
 
+    const onTabSelectionChange = (tabName) => {
+        setSelectedTab(tabName);
+    };
+
     const segregateByDate = (history) => {
         // The params are call_type, created_at, direction, duration, from, id, is_archived, to and via
         const segregatedByDates = [];
@@ -40,7 +44,7 @@ export function Feed() {
     };
 
     return <div className='feed-view'>
-        <TabNav tab={selectedTab} />
-        <TabContent isLoading={isLoading} error={error} tab={selectedTab} callHistory={callHistory} />
+        <TabNav tab={selectedTab} onSelectedTab={onTabSelectionChange} />
+        <TabContent isLoading={isLoading} tab={selectedTab} error={error} callHistory={callHistory} />
     </div>;
 }

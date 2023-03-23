@@ -27,11 +27,20 @@
 
 .inbox > .month > .item {
     display: grid;
-    grid-template-columns: 0.5fr 3fr 1fr; 
+    grid-template-columns: 0.5fr 3fr 0.1fr 1fr; 
     border: 1px solid #E9E9E8;
     border-radius: 12px;
     padding: 12px;
     margin-bottom: 3%;
+}
+
+.inbox > .month > .item > .time {
+    text-align: center;
+    color: #BBBBBA;
+    font-size: 10px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
 }
 
 .to {

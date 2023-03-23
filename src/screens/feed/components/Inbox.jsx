@@ -1,7 +1,7 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 
-export function Inbox({callHistory}) {
+export function Inbox({callHistory, showArchived}) {
     const  navigate = useNavigate();
     const goToDetails = (id) => {
         navigate(`/details/${id}`);
@@ -10,7 +10,7 @@ export function Inbox({callHistory}) {
     return <div className='inbox'>
             <div className='archive-button'>
                 <img width={20} src="public/archive.svg" alt="archive" />
-                Archive all calls
+                {showArchived ? 'Unarchive all calls' : 'Archive all calls'}
             </div>
             {
             Object.keys(callHistory).map((key) => {
@@ -42,6 +42,8 @@ export function Inbox({callHistory}) {
                                     tried to call on <b>{call.to}</b>
                                 </div>
                             </div>
+                            <div style={{marginTop: '0.5em'}} className="vertical-divider"></div>
+                            <div className='time'>
                             {
                                 time.toLocaleTimeString(
                                     'en-US',
@@ -51,6 +53,7 @@ export function Inbox({callHistory}) {
                                         hour12: true
                                     })
                             }
+                            </div>
                         </div>;
                     }
                     )}
