@@ -1,7 +1,17 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 
 export function Inbox({callHistory}) {
+    const  navigate = useNavigate();
+    const goToDetails = (id) => {
+        navigate(`/details/${id}`);
+    };
+
     return <div className='inbox'>
+            <div className='archive-button'>
+                <img width={20} src="public/archive.svg" alt="archive" />
+                Archive all calls
+            </div>
             {
             Object.keys(callHistory).map((key) => {
                 const date = new Date(key);
@@ -20,7 +30,7 @@ export function Inbox({callHistory}) {
                     {
                     callHistory[key].map((call) => {
                         const time = new Date(call.created_at);
-                        return <div className='item' key={call.id}>
+                        return <div onClick={() => goToDetails(call.id) } className='item' key={call.id}>
                             <div>
                                 {call.call_type === 'missed' && <img width={20} src="public/outbound.svg" />}
                                 {call.call_type === 'answered' && <img width={20} src="public/inbound.svg" />}

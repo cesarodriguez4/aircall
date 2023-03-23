@@ -41,6 +41,6 @@ export function Feed() {
 
     return <div className='feed-view'>
         <TabNav tab={selectedTab} />
-        <TabContent tab={selectedTab} callHistory={callHistory} />
+        <TabContent isLoading={isLoading} error={error} tab={selectedTab} callHistory={callHistory} />
     </div>;
 }

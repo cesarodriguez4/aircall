@@ -12,7 +12,7 @@ export function TabNav() {
             </div>
             <div className="vertical-divider"></div>
             <div>
-                All calls
+                Archived
             </div>
             <div className="vertical-divider"></div>
             <div>
