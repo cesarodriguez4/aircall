@@ -1,14 +1,22 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 
-export function Inbox({callHistory, showArchived}) {
+export function Inbox({callHistory, showArchived, onUnArchiveAll, onArchiveAll}) {
     const  navigate = useNavigate();
     const goToDetails = (id) => {
         navigate(`/details/${id}`);
     };
 
+    const onArchiveAction = () => {
+        if (showArchived) {
+            onUnArchiveAll();
+        } else {
+            onArchiveAll();
+        }
+    };
+
     return <div className='inbox'>
-            <div className='archive-button'>
+            <div onClick={onArchiveAction} className='archive-button'>
                 <img width={20} src="public/archive.svg" alt="archive" />
                 {showArchived ? 'Unarchive all calls' : 'Archive all calls'}
             </div>
