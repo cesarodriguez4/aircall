@@ -11,7 +11,8 @@
     "dev": "webpack-dev-server --mode development --open",
     "start": "node server.js",
     "build": "webpack --mode production",
-    "postinstall": "npm run build"
+    "copy": "cp **/*.svg dist",
+    "postinstall": "npm run build && npm run copy"
   },
   "engines": {
     "node": "14.19.2"

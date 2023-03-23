@@ -21,6 +21,7 @@
 
 .inbox > .month > .date {
     text-align: center;
+    text-transform: uppercase;
 }
 
 
