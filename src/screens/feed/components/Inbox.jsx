@@ -37,6 +37,12 @@ export function Inbox({callHistory, showArchived, onUnArchiveAll, onArchiveAll})
                     </div>
                     {
                     callHistory[key].map((call) => {
+                        if (!showArchived && call.is_archived) {
+                            return false;
+                        }
+                        if (showArchived && !call.is_archived) {
+                            return false;
+                        }
                         const time = new Date(call.created_at);
                         return <div onClick={() => goToDetails(call.id) } className='item' key={call.id}>
                             <div>
