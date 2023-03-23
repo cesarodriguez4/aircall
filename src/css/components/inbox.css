@@ -22,6 +22,9 @@
 .inbox > .month > .date {
     text-align: center;
     text-transform: uppercase;
+    color: #BBBBBA;
+    font-size: 10px;
+    font-weight: 500;
 }
 
 
